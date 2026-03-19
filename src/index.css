@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #f8f9ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #eef4ff;
+  --color-surface-container: #e8eefa;
+  --color-surface-container-high: #e2e9f4;
+  --color-surface-variant: #dce3ee;
+  
+  --color-primary: #03224d;
+  --color-primary-container: #1f3864;
+  --color-on-primary: #ffffff;
+  
+  --color-on-surface: #151c24;
+  --color-on-surface-variant: #44474f;
+  
+  --color-secondary: #565e72;
+  --color-secondary-container: #dae2fa;
+  --color-on-secondary-container: #5c6478;
+  
+  --color-tertiary: #361e00;
+  --color-tertiary-fixed: #ffddbb;
+  --color-on-tertiary-fixed-variant: #643e0c;
+  --color-tertiary-container: #543100;
+  
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  
+  --color-outline-variant: #c4c6d0;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+}
+
+/* Custom utilities for the design system */
+@layer utilities {
+  .glass-panel {
+    @apply bg-surface-variant/80 backdrop-blur-[20px];
+  }
+  .primary-gradient {
+    @apply bg-gradient-to-r from-primary to-primary-container;
+  }
+  .ambient-shadow {
+    box-shadow: 0 8px 24px -6px rgba(3, 34, 77, 0.08);
+  }
+}
